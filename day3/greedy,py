@@ -1,0 +1,24 @@
+import sys
+import heapq
+input = sys.stdin.readline
+# N 받아오기
+N = int(input())
+templist = []
+# due, cup 받아와서 list에 넣기
+for _ in range (N):
+    d, c = map(int, input().split())
+    templist.append((d,c))
+# 그 list sort해서 duedate 오름차순 정렬하기
+templist.sort()
+# hq 만들기
+hq = []
+# 오름차순 list에 대해 cup을 하나씩 hq에 넣고, 현재 hq 길이가 due보다 클 경우
+# 날짜보다 밀려서 초과된다는 뜻이니 기존 cup 중 최소값 제거
+# 이 과정 반복하면 남은 cup들이 최적화된 cup.
+for due, cup in templist:
+    heapq.heappush(hq, cup)
+    if len(hq)>due:
+        heapq.heappop(hq)
+    
+result = sum(hq)
+print(result)
