@@ -12,3 +12,6 @@ Day 1. 다익스트라 알고리즘 학습 및 심화 문항 풀이
 
 Day 2. 냅색 문제유형 학습 및 심화 문항 풀이
 [2일차 보기](https://github.com/kr-sang/Algorithm-solution/blob/main/day2/%EB%83%85%EC%83%89.md)
+
+Day 3. 3일차
+[3일차 보기](https://github.com/kr-sang/Algorithm-solution/blob/main/day3/greedy.md)
